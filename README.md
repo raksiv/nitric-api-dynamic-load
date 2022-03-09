@@ -1,7 +1,6 @@
 ## Description
 
-A code example demonstrating a dynamic module load.
-Users will pass the name of the module to be loaded via a path param.
+Dynamically load modules for use in a sample API developed with Nitric.
 
 ## Usage
 
@@ -45,25 +44,41 @@ scoop install nitric
 Download as a scripted install via curl.
 
 ```bash
-curl https://nitric.io/install | sh
+curl https://nitric.io/install | bash
 
 ```
 
  </details>
 
-### Step 2: To run locally, run the following commands
+<br/>
+
+> Note: Complete installation guide can be found [here](https://nitric.io/docs/installation)
+
+<br/>
+
+### Step 2: Run the API locally with Nitric
 
 ```bash
 yarn install
 nitric run
 ```
 
-Here are some examples of how to consume the API.
+### Step 3: Consume the API
 
 ```bash
 curl http://localhost:9001/apis/main/hello/cat
+```
 
+```bash
+{"message":"meow"}
+```
+
+```bash
 curl http://localhost:9001/apis/main/hello/donkey
+```
+
+```bash
+{"message":"No greeting module found for animal - donkey"}
 ```
 
 ## What's next?
